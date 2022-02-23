@@ -1,13 +1,20 @@
-template>
+<template>
  
-    <nav class="navbar navbar-expand navbar-dark bg-dark">
-      <router-link :to="{name:'home'}" lass="navbar-brand">Mr. Magorium's Wonder Emporium</router-link>
+    <nav class="navbar navbar-expand navbar-dark bg-primary" style="background-color: #4c427e;">
+      <router-link :to="{name:'home'}" class="navbar-brand">Mr. Magorium's Wonder Emporium</router-link>
       <div class="navbar-nav mr-auto">
         <li class="nav-item">
           <router-link :to="{name:'home'}" class="nav-link">
             <font-awesome-icon icon="home" /> Home
           </router-link>
         </li>
+
+          <li class="nav-item">
+          <router-link :to="{name:'cart'}" class="nav-link">
+            <font-awesome-icon icon="sign-in-alt" /> Cart
+          </router-link>
+        </li>
+
         <li v-if="currentUser" class="nav-item">
           <router-link  :to="{name:'user'}" class="nav-link">User</router-link>
         </li>
@@ -40,6 +47,7 @@ template>
     </nav>
     
 </template>
+
 <script>
 export default {
   computed: {
