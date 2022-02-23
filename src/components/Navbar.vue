@@ -1,6 +1,6 @@
 <template>
  
-    <nav class="navbar navbar-expand navbar-dark bg-primary" style="background-color: #4c427e;">
+    <nav class="navbar navbar-expand navbar-light" style="background-color: #473c75; ">
       <router-link :to="{name:'home'}" class="navbar-brand">Mr. Magorium's Wonder Emporium</router-link>
       <div class="navbar-nav mr-auto">
         <li class="nav-item">
