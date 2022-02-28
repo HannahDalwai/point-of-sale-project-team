@@ -30,7 +30,7 @@
                       v-show="loading"
                       class="spinner-border spinner-border-sm"
                     ></span>
-                    Sign 
+                    Sign Up
                   <i class="button__icon bx bxs-chevron-right bx-fade-right-hover"></i>
                   </button>
                 </div>
