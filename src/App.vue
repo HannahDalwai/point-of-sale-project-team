@@ -27,14 +27,16 @@ export default {
   color: #2c3e50;
   background-color: #eee;
 }
-
+.error-feedback{
+  color: rgb(161, 38, 38);
+}
 #nav {
   padding: 30px;
 }
 
 #nav a {
   font-weight: bold;
-  color: #2c3e50;
+  color: #1e1d1f;
 }
 
 #nav a.router-link-exact-active {
