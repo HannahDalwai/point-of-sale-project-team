@@ -2,6 +2,12 @@
   <div class="container">
     <header class="jumbotron">
       <h3>{{ content }}</h3>
+
+
+
+
+
+
     </header>
   </div>
 </template>
@@ -14,9 +20,11 @@ export default {
       content: "",
     };
   },
+
+
   mounted() {
     UserService.getPublic; getPublicContent(); {
-    return axios.get(API_URL + 'users');
+    return axios.get(API_URL + 'products');
   } Content().then(
       (response) => {
         this.content = response.data;
@@ -31,5 +39,8 @@ export default {
       }
     );
   },
+
+
 };
+
 </script>

@@ -1,43 +1,37 @@
 <template>
 <div class="container">
-  	<div class="screen">
-      <div class="screen__content">
-  <div class="col-md-12">
-    <div class="card card-container bg-transparent">
-      <!-- <img
-        id="profile-img"
-        src="//ssl.gstatic.com/accounts/ui/avatar_2x.png"
-        class="profile-img-card"
-      /> -->
-      <Form @submit="handleLogin" :validation-schema="schema" class="login">
-        <div class="form-group ">
-          <Field name="username" type="text" class="form-control transparent-input" id="login-input" placeholder=" Username" />
-          <ErrorMessage name="username" class="error-feedback" />
-        </div>
-        <div class="form-group">
-        
-        <Field name="password" id="login-input" type="password" class="form-control transparent-input" placeholder=" Password" />
-          <ErrorMessage name="password" class="error-feedback" />
-        </div>
-        <div class="form-group">
-          <button class="button login__submit" :disabled="loading">
-            <span
-              v-show="loading"
-              class="spinner-border spinner-border-sm">
-            </span>
-            <span>Login</span>
-            <i class="button__icon bx bxs-chevron-right bx-fade-right-hover"></i>
-          </button>
+  <div class="screen">
+    <div class="screen__content">
+      <h1 class="display-5">Login</h1>
+       <div class="col-md-12">
+         <div class="card card-container bg-transparent">
+            <Form @submit="handleLogin" :validation-schema="schema" class="login">
+              <div class="form-group ">
+                <Field name="username" type="text" class="form-control transparent-input" id="login-input" placeholder=" Username" />
+                <ErrorMessage name="username" class="error-feedback" />
+              </div>
+              <div class="form-group">
+              
+              <Field name="password" id="login-input" type="password" class="form-control transparent-input" placeholder=" Password" />
+                <ErrorMessage name="password" class="error-feedback" />
+              </div>
+              <div class="form-group">
+                <button class="button login__submit" :disabled="loading">
+                  <span
+                    v-show="loading"
+                    class="spinner-border spinner-border-sm">
+                  </span>
+                  <span>Login</span>
+                  <i class="button__icon bx bxs-chevron-right bx-fade-right-hover"></i>
+                </button>
 
-
-
-        </div>
-        <div class="form-group">
-          <div v-if="message" class="alert alert-danger" role="alert">
-            {{ message }}
-          </div>
-        </div>
-      </Form>
+              </div>
+              <div class="form-group">
+                <div v-if="message" class="alert alert-danger" role="alert">
+                  {{ message }}
+                </div>
+              </div>
+            </Form>
     </div>
     </div>
     </div>
@@ -115,6 +109,11 @@ export default {
 	margin: 0;
 	padding: 0;	
 	font-family: Raleway, sans-serif;
+}
+
+h1{
+margin-top: 15%;
+
 }
 
 body {
@@ -197,7 +196,7 @@ body {
 .login {
 	width: 320px;
 	padding: 30px;
-	padding-top: 156px;
+	padding-top: 40px;
 }
 
 .login__field {
@@ -232,7 +231,7 @@ body {
 .login__submit {
 	background: #fff;
 	font-size: 14px;
-	margin-top: 30px;
+	margin-top: 140px;
 	padding: 16px 20px;
 	border-radius: 26px;
 	border: 1px solid #D4D3E8;
