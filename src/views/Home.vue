@@ -15,7 +15,9 @@ export default {
     };
   },
   mounted() {
-    UserService.getPublicContent().then(
+    UserService.getPublic; getPublicContent(); {
+    return axios.get(API_URL + 'users');
+  } Content().then(
       (response) => {
         this.content = response.data;
       },

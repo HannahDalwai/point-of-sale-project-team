@@ -15,7 +15,7 @@
           </div>
           <div class="form-group">
             <label for="email">Email</label>
-            <Field name="email" type="email" class="form-control" />
+            <Field name="email" type="email" class="form-control"  />
             <ErrorMessage name="email" class="error-feedback" />
           </div>
           <div class="form-group">
