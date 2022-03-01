@@ -5,26 +5,15 @@
 
 
 
+
+
 </template>
 
 <script>
+
 export default {
-name: "App",
-  data() {
-    return {
-      getResult: null,
-    }
-  },
-  methods: {
-    fortmatResponse(res) {
-      return JSON.stringify(res, null, 2);
-    },
-
-  }
-
 
 }
-
 </script>
 
 
