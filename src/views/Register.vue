@@ -75,12 +75,12 @@ export default {
         .required("Username is required!")
         .min(3, "Must be at least 3 characters!")
         .max(20, "Must be maximum 20 characters!"),
-         Phone_Number: yup
-        .string()
-        .required("Phone  Number is required!")
-        .email("Phone Number is invalid!")
-        .min(10, "Must be at least 10 characters !")
-        .max(10, "Must be maximum  characters !"),
+    //  Phone_Number: yup
+    //     .string()
+    //     .required("Phone  Number is required!")
+    //     .email("Phone Number is invalid!")
+    //     .min(10, "Must be at least 10 characters !")
+    //     .max(15, "Must be maximum 15 characters !"),
       email: yup
         .string()
         .required("Email is required!")

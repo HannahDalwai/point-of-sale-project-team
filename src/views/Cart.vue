@@ -1,5 +1,5 @@
 <template>
-  
+<div class="md-layout">
 
 <h1>This is our cart</h1>
 

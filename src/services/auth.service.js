@@ -1,5 +1,5 @@
 import axios from 'axios';
-const API_URL = 'https://pointonsalebackend.herokuapp.com';
+const API_URL = 'https://pointonsalebackend.herokuapp.com/users';
 export default {
   login(user) {
     return axios
@@ -18,9 +18,10 @@ export default {
     localStorage.removeItem('user');
   },
   register(user) {
-    return axios.post(API_URL + 'signup', {
+    return axios.post(API_URL, {
       username: user.username,
       email: user.email,
+      phone_number: user.phone_number,
       password: user.password
     });
   }
