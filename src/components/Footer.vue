@@ -1,16 +1,14 @@
 <template>
-  <div  class="container my-5">
 
+<div class="footers">
+  <div  class="container my-5">
   <!-- Footer -->
-  <footer id="footer"
-          class="text-center text-lg-start text-white"
-          style="background-color: #1c2331"
-          >
+  <footer  class="text-center text-lg-start text-white" style="background-color: #1c2331">
     <!-- Section: Social media -->
     <section
              class="d-flex justify-content-between p-4"
-             style="background-color: #6351ce"
-             >
+             style="background-color: #6351ce " 
+            >
       <!-- Left -->
       <div class="me-5">
         <span>Get connected with us on social networks:</span>
@@ -83,9 +81,7 @@
 
     <!-- Copyright -->
     <div
-         class="text-center p-3"
-         style="background-color: rgba(0, 0, 0, 0.2)"
-         >
+         class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2)">
       © 2022 Copyright:
       <p class="text-white">Project.com</p>
     </div>
@@ -95,6 +91,7 @@
 
 </div>
 <!-- End of .container -->
+</div>
 </template>
 
 <script>
@@ -104,7 +101,15 @@ export default {
 </script>
 
 <style scoped>
-#footer{
-    width: 100%;
+
+
+.container{
+  padding: 0%;
 }
+#footers{
+  width: 100%;
+  padding: 0%;
+  margin: 0%;
+}
+
 </style>
