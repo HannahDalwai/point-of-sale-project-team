@@ -29,16 +29,4 @@ export default {
 .error-feedback{
   color: rgb(161, 38, 38);
 }
-#nav {
-  padding: 30px;
-}
-
-#nav a {
-  font-weight: bold;
-  color: #1e1d1f;
-}
-
-#nav a.router-link-exact-active {
-  color: #42b983;
-}
 </style>

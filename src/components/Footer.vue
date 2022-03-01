@@ -1,8 +1,8 @@
 <template>
-  <div id="footer" class="container my-5">
+  <div  class="container my-5">
 
   <!-- Footer -->
-  <footer
+  <footer id="footer"
           class="text-center text-lg-start text-white"
           style="background-color: #1c2331"
           >
@@ -16,29 +16,6 @@
         <span>Get connected with us on social networks:</span>
       </div>
       <!-- Left -->
-
-      <!-- Right -->
-      <div>
-        <a href="" class="text-white me-4">
-          <i class="fab fa-facebook-f"></i>
-        </a>
-        <a href="" class="text-white me-4">
-          <i class="fab fa-twitter"></i>
-        </a>
-        <a href="" class="text-white me-4">
-          <i class="fab fa-google"></i>
-        </a>
-        <a href="" class="text-white me-4">
-          <i class="fab fa-instagram"></i>
-        </a>
-        <a href="" class="text-white me-4">
-          <i class="fab fa-linkedin"></i>
-        </a>
-        <a href="" class="text-white me-4">
-          <i class="fab fa-github"></i>
-        </a>
-      </div>
-      <!-- Right -->
     </section>
     <!-- Section: Social media -->
 
@@ -70,16 +47,16 @@
                 style="width: 60px; background-color: #7c4dff; height: 2px"
                 />
             <p>
-              <a target="_blank"  href="#!" class="text-white">Hannah's Github</a>
+              <a target="_blank"  href="https://github.com/HannahDalwai" class="text-white">Hannah's Github</a>
             </p>
             <p>
-              <a target="_blank"  href="#!" class="text-white">Lindo's Github</a>
+              <a target="_blank"  href="https://github.com/Innocent27" class="text-white">Lindokuhle's Github</a>
             </p>
             <p>
-              <a target="_blank"  href="#!" class="text-white">Lindo's Netlify</a>
+              <a target="_blank"  href="https://codepen.io/innocent27" class="text-white">Lindokuhle's Codepen</a>
             </p>
             <p>
-              <a  target="_blank" href="#!" class="text-white">Hannah's Netlify</a>
+              <a  target="_blank" href="https://codepen.io/HannahDalwai" class="text-white">Hannah's Codepen</a>
             </p>
           </div>
           <!-- Grid column -->
@@ -110,9 +87,7 @@
          style="background-color: rgba(0, 0, 0, 0.2)"
          >
       © 2022 Copyright:
-      <a class="text-white" href="https://mdbootstrap.com/"
-         >Project.com</a
-        >
+      <p class="text-white">Project.com</p>
     </div>
     <!-- Copyright -->
   </footer>
