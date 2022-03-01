@@ -7,8 +7,8 @@
          <div class="card card-container bg-transparent">
             <Form @submit="handleLogin" :validation-schema="schema" class="login">
               <div class="form-group ">
-                <Field name="username" type="text" class="form-control transparent-input" id="login-input" placeholder=" Username" />
-                <ErrorMessage name="username" class="error-feedback" />
+                <Field name="email" type="text" class="form-control transparent-input" id="login-input" placeholder=" Email" />
+                <ErrorMessage name="email" class="error-feedback" />
               </div>
               <div class="form-group">
               
