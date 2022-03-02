@@ -44,7 +44,7 @@ export default {
     return {
       name: "",
       email: "",
-      contact: "",
+      phone_number: "",
       password: "",
     };
   },
@@ -55,7 +55,7 @@ export default {
         body: JSON.stringify({
           name: this.name,
           email: this.email,
-          contact: this.contact,
+          phone_number: this.phone_number,
           password: this.password,
         }),
         headers: {
