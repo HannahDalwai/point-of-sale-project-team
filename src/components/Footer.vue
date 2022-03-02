@@ -1,7 +1,7 @@
 <template>
 
 <div class="footers">
-  <div  class="container my-5">
+  <div  class="container ">
   <!-- Footer -->
   <footer  class="text-center text-lg-start text-white" style="background-color: #1c2331">
     <!-- Section: Social media -->
@@ -34,7 +34,7 @@
            This is a Point Of Sale project. Made with : node.js, express, mongodb, bootstrap5, Vue3, VueX, Vee-validate.
             </p>
           </div>
-        
+
 
           <!-- Grid column -->
           <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
@@ -104,7 +104,10 @@ export default {
 
 
 .container{
-  padding: 0%;
+  margin-bottom: 0%;
+  margin-left: 0%;
+  margin-right: 0%;
+  margin-top: 5px;
 }
 #footers{
   width: 100%;
