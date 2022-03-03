@@ -1,45 +1,34 @@
 <template>
-  <nav>
-    <router-link class="but" to="/">HOME</router-link>
-  </nav>
-
-  <br />
-  <br />
-
-  <div class="Login">
+<div class="container">
+	<div class="screen">
+		<div class="screen__content">
+  
     <form @submit.prevent="login" class="form neu-border">
-      <h2 class="form-heading"></h2>
-      <input
-        class="form-input neu-border-inset"
-        type="email"
-        v-model="email"
-        placeholder="Email"
-        required
-      />
-      <input
-        class="form-input neu-border-inset"
-        type="password"
-        v-model="password"
-        placeholder="Password"
-        required
-      />
-      <button type="submit" class="form-btn">Login</button>
+      <h2 class="form-heading">Login</h2>
+	<div class="login__field">
+      <input class="login__input" type="email" v-model="email" placeholder="Email" required/>
+  	</div>
 
-      <!-- <div class="form-social-login">
-      <button class="form-btn neu-border form-social-btn">
-        <i class="fab fa-google"></i>
-      </button>
-      <button class="form-btn neu-border form-social-btn">
-        <i class="fab fa-facebook-f"></i>
-      </button>
-    </div> -->
+     <div class="login__field">
+       <input class="login__input" type="password" v-model="password" placeholder="Password" required/>
+  	 </div>
 
-      <p>
-        Not a member?
-        <router-link to="/Register">Register</router-link>
-      </p>
+
+    <button type="submit" class="button login__submit" :disabled="loading"> 
+	<span v-show="loading" class="spinner-border spinner-border-sm"></span>
+    <span>Log In</span></button>
+
+   
     </form>
   </div>
+        <div class="screen__background">
+			<span class="screen__background__shape screen__background__shape4"></span>
+			<span class="screen__background__shape screen__background__shape3"></span>		
+			<span class="screen__background__shape screen__background__shape2"></span>
+			<span class="screen__background__shape screen__background__shape1"></span>
+		</div>
+  </div>
+</div>
 </template>
 <script>
 export default {
@@ -47,6 +36,8 @@ export default {
     return {
       email: "",
       password: "",
+	  loading: false,
+
     };
   },
   methods: {

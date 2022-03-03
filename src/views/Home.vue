@@ -50,7 +50,7 @@ export default {
   },
   methods: {
     register() {
-      fetch("https://pos-bkend.herokuapp.com/users", {
+      fetch("https://pointonsalebackend.herokuapp.com/'users", {
         method: "POST",
         body: JSON.stringify({
           name: this.name,

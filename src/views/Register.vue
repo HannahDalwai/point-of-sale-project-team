@@ -2,38 +2,49 @@
 <div class="container">
 	<div class="screen">
 		<div class="screen__content">
-  <form @submit.prevent="register" cclass="login">
-    <input class="login__input" type="text" v-model="name" placeholder="Username" required/>
+  <form @submit.prevent="register" class="login">
+	<h2 class="form-heading">Sign Up</h2>
+		  <div class="login__field">
+          <input class="login__input" type="text" v-model="fullname" placeholder="Username" required/>
+	  	</div>
 
-    <input class="login__input" type="email" v-model="email" placeholder="Email" required/>
-
-    <input class="login__input" type="password" v-model="password" placeholder="Password" required/>
-
- 
-	<button class="button login__submit">
-              <button type="submit" class="button__text">Sign Up</button>
-					<i class="button__icon fas fa-chevron-right"></i>
-				</button>	
-
-  </form>
+        <div class="login__field">
+          <input class="login__input" type="text" v-model="email" placeholder="Contact " required/>
   		</div>
-			</div>
-		</div>
-  <div class="screen__background">
+
+    	<div class="login__field">
+          <input class="login__input" type="email" v-model="phone_number" placeholder="Email" required/>
+  		</div>
+
+	<div class="login__field">
+    <input class="login__input" type="password" v-model="password" placeholder="Password" required/>
+  		</div>
+	
+              <button type="submit" class="button login__submit" :disabled="loading"> 
+				<span v-show="loading" class="spinner-border spinner-border-sm"></span>
+                <span>Sign Up</span></button>
+		       <i class="button__icon fas fa-chevron-right"></i>
+	
+  </form>
+  	</div>
+		<div class="screen__background">
 			<span class="screen__background__shape screen__background__shape4"></span>
 			<span class="screen__background__shape screen__background__shape3"></span>		
 			<span class="screen__background__shape screen__background__shape2"></span>
 			<span class="screen__background__shape screen__background__shape1"></span>
 		</div>
+	</div>
+</div>
 </template>
 <script>
 export default {
   data() {
     return {
-      name: "",
+      fullname: "",
       email: "",
-      contact: "",
+      phone_number: "",
       password: "",
+	  loading: false,
     };
   },
   methods: {
@@ -41,9 +52,9 @@ export default {
       fetch("https://pointonsalebackend.herokuapp.com/users", {
         method: "POST",
         body: JSON.stringify({
-          name: this.name,
+          fullname: this.fullname,
           email: this.email,
-          contact: this.contact,
+          phone_number: this.phone_number,
           password: this.password,
         }),
         headers: {
@@ -54,7 +65,7 @@ export default {
         .then((json) => {
           alert("User registered");
           localStorage.setItem("jwt", json.jwt);
-          this.$router.push({ name: "Login" });
+        //   this.$router.push({ name: "login8" });
         })
         .catch((err) => {
           alert(err);
@@ -94,6 +105,7 @@ body {
 	z-index: 1;
 	position: relative;	
 	height: 100%;
+ 
 }
 
 .screen__background {		
@@ -105,6 +117,7 @@ body {
 	z-index: 0;
 	-webkit-clip-path: inset(0 0 0 0);
 	clip-path: inset(0 0 0 0);	
+
 }
 
 .screen__background__shape {
@@ -151,7 +164,7 @@ body {
 .login {
 	width: 320px;
 	padding: 30px;
-	padding-top: 156px;
+	padding-top: 10px;
 }
 
 .login__field {
