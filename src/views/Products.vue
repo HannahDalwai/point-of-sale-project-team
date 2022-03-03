@@ -278,9 +278,9 @@
                   id="addCategory"
                   v-model="category"
                 >
-                  <option value="Snacks">Snacks</option>
-                  <option value="Sweets">Sweets</option>
-                  <option value="Drink">Drink</option>
+                  <option value="Stationary">Stationary</option>
+                  <option value="Office">Office</option>
+                  <option value="Arts and Craft">Arts and craft</option>
                 </select>
               </div>
               <div class="mb-3">

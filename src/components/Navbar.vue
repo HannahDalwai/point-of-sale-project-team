@@ -27,8 +27,11 @@
           <li class="nav-item">
            <router-link :to="{name:'cart'}" class="nav-link"> Cart</router-link>
         </li>
+            <li class="nav-item">
+           <router-link :to="{name:'products'}" class="nav-link"> Products</router-link>
+        </li>
         <li class="nav-item">
-        <router-link class="but" to="/Login">Log Out</router-link>
+        <router-link class="but nav-link" to="/Login">Log Out</router-link>
         </li>
       </ul>
        </div>
