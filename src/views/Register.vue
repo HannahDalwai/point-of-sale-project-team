@@ -49,8 +49,10 @@ export default {
   },
   methods: {
     register() {
+		console.log(this.fullname, this.email, this.phone_number, this.password)
       fetch("https://pointonsalebackend.herokuapp.com/users", {
         method: "POST",
+		// mode: 'no-cors',
         body: JSON.stringify({
           fullname: this.fullname,
           email: this.email,
@@ -63,11 +65,13 @@ export default {
       })
         .then((response) => response.json())
         .then((json) => {
+			console.log(json)
           alert("User registered");
           localStorage.setItem("jwt", json.jwt);
-        //   this.$router.push({ name: "login8" });
+          this.$router.push({ name: "login" });
         })
         .catch((err) => {
+			console.log("error: "+err)
           alert(err);
         });
     },
@@ -91,21 +95,22 @@ body {
 	align-items: center;
 	justify-content: center;
 	min-height: 100vh;
+
 }
 
 .screen {		
 	background: linear-gradient(90deg, #5D54A4, #7C78B8);		
 	position: relative;	
-	height: 600px;
+	height: 530px;
 	width: 360px;	
 	box-shadow: 0px 0px 24px #5C5696;
+	
 }
 
 .screen__content {
 	z-index: 1;
 	position: relative;	
 	height: 100%;
- 
 }
 
 .screen__background {		
@@ -168,7 +173,7 @@ body {
 }
 
 .login__field {
-	padding: 20px 0px;	
+	padding: 10px 0px;	
 	position: relative;	
 }
 

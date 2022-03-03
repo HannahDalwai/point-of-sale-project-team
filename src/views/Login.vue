@@ -42,8 +42,10 @@ export default {
   },
   methods: {
     login() {
-      fetch("https://pointonsalebackend.herokuapp.com/users/", {
-        method: "PATCH",
+		console.log(this.email, this.password);
+      fetch("https://pointonsalebackend.herokuapp.com/users/login", {
+        method: "POST",
+		// mode: 'no-cors',
         body: JSON.stringify({
           email: this.email,
           password: this.password,
@@ -54,12 +56,14 @@ export default {
       })
         .then((response) => response.json())
         .then((json) => {
+			// console.log(json);
           localStorage.setItem("jwt", json.jwt);
           alert("User logged in");
-          this.$router.push({ name: "Products" });
+           this.$router.push({ name: "products" });
         })
         .catch((err) => {
-          alert("User does not exsist");
+			console.log(err);
+          alert("User does not exist");
         });
     },
   },

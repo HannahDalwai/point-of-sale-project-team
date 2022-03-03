@@ -3,6 +3,7 @@ import Home from "@/views/Home.vue";
 import Login from "@/views/Login.vue";
 import Register from "@/views/Register.vue";
 import Cart from "@/views/Cart.vue";
+import Products from "@/views/Products.vue";
 // lazy-loaded
 const Profile = () => import("@/views/Profile.vue")
 const BoardUser = () => import("@/components/BoardUser.vue")
@@ -44,6 +45,11 @@ const routes = [
     // lazy-loaded
     component: BoardUser,
   },
+  {
+    path: "/products",
+     name: "products",
+    component: Products,
+  },
 ];
 const router = createRouter({
   history: createWebHistory(),
@@ -51,7 +57,7 @@ const router = createRouter({
 });
 
 router.beforeEach((to, from, next) => {
-  const publicPages = ['/login', '/register', '/home'];
+  const publicPages = ['/login', '/register', '/home','/products'];
   const authRequired = !publicPages.includes(to.path);
   const loggedIn = localStorage.getItem('user');
   // trying to access a restricted page + not logged in
