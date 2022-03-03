@@ -24,6 +24,12 @@
             <font-awesome-icon icon="sign-in-alt" /> Login
           </router-link>
         </li>
+          <li class="nav-item">
+           <router-link :to="{name:'cart'}" class="nav-link"> Cart</router-link>
+        </li>
+        <li class="nav-item">
+        <router-link class="but" to="/Login">Log Out</router-link>
+        </li>
       </ul>
        </div>
         <div v-if="currentUser" class="navbar-nav ml-auto">
@@ -33,16 +39,8 @@
             {{ currentUser.username }}
           </router-link>
         </li>
-          <li class="nav-item">
-          <router-link :to="{name:'cart'}" class="nav-link">
-            <font-awesome-icon icon="sign-in-alt" /> Cart
-          </router-link>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" @click.prevent="logOut">
-            <font-awesome-icon icon="sign-out-alt" /> LogOut
-          </a>
-        </li>
+       
+        
         </div>
     </div>
   </div>
