@@ -1,9 +1,10 @@
 <template>
  
   <div class="container d-flex justify-content-end mb-3 mt-5 pt-4">
+    <div v-for="post of filteredPosts" :key="post._id" >
     <div class="d-flex w-25 ms-3">
       <label for="" class="form-label">Sort by category</label>
-
+      <input type="text"  placeholder="search blogs" v-model="search">
       <select
         class="form-select"
         name=""
@@ -15,6 +16,7 @@
         <option value="Office">Office</option>
         <option value="Arts and craft">Arts and craft</option>
       </select>
+    </div>
     </div>
 
     <div class="d-flex w-25 ms-3">
@@ -445,7 +447,7 @@ export default {
         alert("User not logged in");
         return this.$router.push({ name: "Login" });
       }
-      fetch("https://pointonsalebackend.herokuapp.com//products", {
+      fetch("https://pointonsalebackend.herokuapp.com/products", {
         method: "POST",
         body: JSON.stringify({
           title: this.title,
@@ -503,7 +505,7 @@ export default {
         alert("User not logged in");
         return this.$router.push({ name: "Login" });
       }
-      fetch("https://pointonsalebackend.herokuapp.com/users" + this.id, {
+      fetch("https://pointonsalebackend.herokuapp.com/products" + this.id, {
         method: "PUT",
         body: JSON.stringify({
           fullname: this.fullname,

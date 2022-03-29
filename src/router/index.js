@@ -4,6 +4,7 @@ import Login from "@/views/Login.vue";
 import Register from "@/views/Register.vue";
 import Cart from "@/views/Cart.vue";
 import Products from "@/views/Products.vue";
+import Contact from "@/views/Products.vue";
 // lazy-loaded
 const Profile = () => import("@/views/Profile.vue")
 const BoardUser = () => import("@/components/BoardUser.vue")
@@ -37,6 +38,11 @@ const routes = [
     name: "profile",
     // lazy-loaded
     component: Profile,
+  },
+  {
+    path: "/contact",
+     name: "contact",
+    component: Contact,
   },
 
   {
