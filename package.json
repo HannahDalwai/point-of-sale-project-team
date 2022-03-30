@@ -11,6 +11,7 @@
     "bootstrap": "^4.6.1",
     "core-js": "^3.6.5",
     "jquery": "^3.6.0",
+    "mdb-vue-ui-kit": "^1.11.0",
     "popper.js": "^1.16.1",
     "vee-validate": "^4.5.9",
     "vue": "^3.0.0",
@@ -22,7 +23,7 @@
     "@vue/cli-plugin-babel": "~4.5.15",
     "@vue/cli-plugin-router": "~4.5.15",
     "@vue/cli-plugin-vuex": "~4.5.15",
-    "@vue/cli-service": "~4.5.15",
+    "@vue/cli-service": "^5.0.4",
     "@vue/compiler-sfc": "^3.0.0"
   }
 }
