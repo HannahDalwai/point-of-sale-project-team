@@ -19,20 +19,25 @@
     </div>
     </div>
 
-    <div class="d-flex w-25 ms-3">
-      <label for="" class="form-label">Sort by name</label>
-      <select class="form-select" name="" id="sortName" onchange="sortName()">
-        <option value="ascending">Ascending</option>
-        <option value="descending">Descending</option>
-      </select>
-    </div>
-    <div class="d-flex w-25 ms-3">
-      <label for="" class="form-label">Sort by price</label>
-      <select class="form-select" name="" id="sortPrice" onchange="sortPrice()">
-        <option value="ascending">Ascending</option>
-        <option value="descending">Descending</option>
-      </select>
-    </div>
+  <label>
+        Sort Title:
+        <select v-model="title" @change="sortTitle(title)">
+            <option value="">All</option>
+          <option value="asc">Ascending</option>
+          <option value="desc">Descending</option>
+        </select>
+      </label>
+
+<label>
+        Sort Price:
+        <select v-model="price" @change="sortPrice(price)">
+            <option value="">All</option>
+          <option value="asc">Ascending</option>
+          <option value="desc">Descending</option>
+        </select>
+      </label>
+
+ 
     <button
       type="button"
       class="btn btn-primary"
@@ -357,6 +362,7 @@
             <p class="card-text">{{ product.category }}</p>
             <p class="card-text">{{ product.description }}</p>
             <p class="card-text">{{ product._id }}</p>
+            <p><button><router-link class="read-more" :to="{ name: 'ProductDetails', params: { id: product._id } }" >Read more</router-link></button></p>
             <div class="d-flex mb-3">
               <input
                 type="number"
@@ -398,8 +404,10 @@
 
 <script>
 export default {
+  props: ["product","idx"],
   data() {
     return {
+      filteredProducts:null,
       products: [],
       fullname: "",
       email: "",
@@ -421,9 +429,10 @@ export default {
           Authorization: `Bearer ${localStorage.getItem("jwt")}`,
         },
       })
-        .then((response) => response.json())
-        .then((json) => {
-          this.products = json;
+        .then((res) => res.json())
+        .then((data) => {
+          this.products = data;
+          this.filteredProducts = data;
         })
         .catch((err) => {
           alert("User not logged in");
@@ -436,11 +445,30 @@ export default {
   computed: {
     filterProducts: function () {
       return this.products.filter((product) => {
-        return product.category.match(this.search);
+        return product.title.match(this.search);
       });
     },
   },
   methods: {
+    sortPrice(dir) {
+      this.filteredProducts = this.filteredProducts.sort(
+        (a, b) => a.price- b.price
+      );
+      if (dir == "desc") this.filteredProducts.reverse();
+    },
+     sortTitle(dir) {
+      this.filteredBlogs = this.filteredBlogs.sort((a, b) => {
+        if (a.title < b.title) {
+          return -1;
+        }
+        if (a.title > b.title) {
+          return 1;
+        }
+        return 0;
+      });
+      if (dir == "desc") this.filteredBlogs.reverse();
+    },
+   },
     // Create Product
     createProduct() {
       if (!localStorage.getItem("jwt")) {
@@ -548,6 +576,5 @@ export default {
           alert(err);
         });
     },
-  },
 };
 </script>

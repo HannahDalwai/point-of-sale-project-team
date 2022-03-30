@@ -4,7 +4,10 @@ import Login from "@/views/Login.vue";
 import Register from "@/views/Register.vue";
 import Cart from "@/views/Cart.vue";
 import Products from "@/views/Products.vue";
-import Contact from "@/views/Products.vue";
+import ProductDetails from "@/views/ProductDetails.vue";
+import Contact from "@/views/Contact.vue";
+import Create from "@/views/Create.vue";
+import NotFound from "@/views/NotFound.vue";
 // lazy-loaded
 const Profile = () => import("@/views/Profile.vue")
 const BoardUser = () => import("@/components/BoardUser.vue")
@@ -46,15 +49,37 @@ const routes = [
   },
 
   {
+    path: "/user", 
     path: "/user",
+    name: "user",
+      // lazy-loaded
+    component: BoardUser,
+    },
+    {
     name: "user",
     // lazy-loaded
     component: BoardUser,
+  },  {
+    path: "/create",
+    name: "create",
+    // lazy-loaded
+    component: Create,
   },
+  {
+  path: "/:catchAll(.*)",
+  name: "NotFound",
+  // lazy-loaded
+  component: NotFound,
+},
   {
     path: "/products",
      name: "products",
     component: Products,
+  },
+  {
+    path: "/products/:id",
+     name: "ProductDetails",
+    component: ProductDetails
   },
 ];
 const router = createRouter({
