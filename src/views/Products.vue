@@ -442,7 +442,7 @@
       </div>
     </div>
   </div>
- <input type="text" v-model="search" />
+ <input type="text" v-model="search" placeholder="Search phrase NB! case sensitive"/>
   
 
   <div class="container my-5">
