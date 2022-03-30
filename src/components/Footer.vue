@@ -1,118 +1,69 @@
 <template>
-
-<div class="footers">
-  <div  class="container ">
-  <!-- Footer -->
-  <footer  class="text-center text-lg-start text-white" style="background-color: #1c2331">
-    <!-- Section: Social media -->
-    <section
-             class="d-flex justify-content-between p-4"
-             style="background-color: #6351ce " 
-            >
-      <!-- Left -->
-      <div class="me-5">
-        <span>Get connected with us on social networks:</span>
-      </div>
-      <!-- Left -->
-    </section>
-    <!-- Section: Social media -->
-
-    <!-- Section: Links  -->
-    <section class="">
-      <div class="container text-center text-md-start mt-5">
-        <!-- Grid row -->
-        <div class="row mt-3">
-          <!-- Grid column -->
-          <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
-            <!-- Content -->
-            <h6 class="text-uppercase fw-bold">L & H</h6>
-            <hr
-                class="mb-4 mt-0 d-inline-block mx-auto"
-                style="width: 60px; background-color: #7c4dff; height: 2px"
-                />
-            <p>
-           This is a Point Of Sale project. Made with : node.js, express, mongodb, bootstrap5, Vue3, VueX, Vee-validate.
-            </p>
-          </div>
-
-
-          <!-- Grid column -->
-          <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
-            <!-- Links -->
-            <h6 class="text-uppercase fw-bold">Useful links</h6>
-            <hr
-                class="mb-4 mt-0 d-inline-block mx-auto"
-                style="width: 60px; background-color: #7c4dff; height: 2px"
-                />
-            <p>
-              <a target="_blank"  href="https://github.com/HannahDalwai" class="text-white">Hannah's Github</a>
-            </p>
-            <p>
-              <a target="_blank"  href="https://github.com/Innocent27" class="text-white">Lindokuhle's Github</a>
-            </p>
-            <p>
-              <a target="_blank"  href="https://codepen.io/innocent27" class="text-white">Lindokuhle's Codepen</a>
-            </p>
-            <p>
-              <a  target="_blank" href="https://codepen.io/HannahDalwai" class="text-white">Hannah's Codepen</a>
-            </p>
-          </div>
-          <!-- Grid column -->
-
-          <!-- Grid column -->
-          <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
-            <!-- Links -->
-            <h6 class="text-uppercase fw-bold">Contact Us</h6>
-            <hr
-                class="mb-4 mt-0 d-inline-block mx-auto"
-                style="width: 60px; background-color: #7c4dff; height: 2px"
-                />
-            <p><i class="fas fa-home mr-3"></i> Cape Town 12345, South Africa</p>
-            <p><i class="fas fa-envelope mr-3"></i> info@example.com</p>
-            <p><i class="fas fa-phone mr-3"></i> + 01 234 567 88</p>
-            <p><i class="fas fa-print mr-3"></i> + 01 234 567 89</p>
-          </div>
-          <!-- Grid column -->
+<div class="contain">
+     <footer class="w-100 py-4 flex-shrink-0">
+        <div class="container py-4">
+            <div class="row gy-4 gx-5">
+                <div class="col-lg-12 col-md-12 col-sm-12">
+                    <!-- <h5 class="h1 text-white">Stay Mindful <img class="heart" src="https://i.postimg.cc/FRP7HSps/pink-heart2.png" alt=""> </h5> -->
+                    <p class="small text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt.</p>
+                    <p class="small text-muted mb-0">&copy; Copyrights. All rights reserved. 2022 <a target="_blank" href="https://github.com/HannahDalwai">Hannah Dalwai</a>   <a target="_blank" href="https://github.com/Innocent27">Lindokhle Nkamela</a>  </p>
+                </div>
+          
+               
+            </div>
         </div>
-        <!-- Grid row -->
-      </div>
-    </section>
-    <!-- Section: Links  -->
-
-    <!-- Copyright -->
-    <div
-         class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2)">
-      © 2022 Copyright:
-      <p class="text-white">Project.com</p>
-    </div>
-    <!-- Copyright -->
-  </footer>
-  <!-- Footer -->
-
-</div>
-<!-- End of .container -->
+    </footer>
 </div>
 </template>
 
 <script>
 export default {
-
 }
 </script>
 
 <style scoped>
-
-
-.container{
-  margin-bottom: 0%;
-  margin-left: 0%;
-  margin-right: 0%;
-  margin-top: 5px;
+.heart{
+  height: 30px;
+  width: 30px;
 }
-#footers{
+.contain{
+  position: absolute;
+  position: unset;
+  /* padding-bottom: -40%; */
+  /* position: fixed; */
+  /* bottom: 0; */
   width: 100%;
-  padding: 0%;
-  margin: 0%;
 }
-
+.text-small {
+  font-size: 0.9rem;
+}
+a {
+  color: #56ab2f;
+  transition: all 0.3s;
+}
+a:hover, a:focus {
+  text-decoration: none;
+  color: white;
+}
+.form-control {
+  background: #a4ae9d;
+  border-color: #41493b;
+}
+.form-control:focus {
+  background: #a4ae9d;
+}
+footer {
+  background: #495057;;
+  margin-top: 10%;
+  
+}
+button{
+  background-color:#56ab2f ;
+  color: white;
+  
+}
+button:hover{
+  color: #41493b;
+  background-color: white;
+}
 </style>

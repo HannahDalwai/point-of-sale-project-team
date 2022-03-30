@@ -20,7 +20,7 @@ export default {
   register(user) {
     return axios.post(API_URL + 'users', {
       username: user.username,
-      email: user.email,
+      email: user.email, 
       phone_number: user.phone_number,
       password: user.password
     });

@@ -31,7 +31,6 @@
         <i class="fab fa-facebook-f"></i>
       </button>
     </div> -->
-
     <p>
       Already a member?
       <router-link :to="{ name: 'Login' }">Sign in</router-link>
