@@ -61,8 +61,7 @@ const routes = [
     component: BoardUser,
   },  {
     path: "/create",
-    name: "create",
-    // lazy-loaded
+    name: "Create",
     component: Create,
   },
   {
