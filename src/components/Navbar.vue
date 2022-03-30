@@ -69,3 +69,12 @@ export default {
   }
 };
 </script>
+<style scoped>
+.navbar:active{
+  color: yellowgreen;
+}
+.active:hover,a.router-link-active{
+ 
+ background-color: lightblue;
+}
+</style>

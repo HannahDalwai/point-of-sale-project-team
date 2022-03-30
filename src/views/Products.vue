@@ -60,6 +60,7 @@
   <hr />
   <!-- Button trigger modal -->
 
+  
   <!-- Modal -->
   <div
     class="modal fade"
@@ -159,6 +160,102 @@
     </div>
   </div>
 
+  <!-- Modal -->
+  <div
+    class="modal fade"
+    id="exampleModal"
+    tabindex="-1"
+    aria-labelledby="exampleModalLabel"
+    aria-hidden="true"
+  >
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="modal"
+          aria-label="Close"
+        ></button>
+
+        <div class="modal-body">
+          <div class="modal-content">
+            <div class="modal-body">
+              <div class="mb-3">
+                <label for="addTitle" class="form-label">Title</label>
+                <input
+                  class="form-control"
+                  type="text"
+                  name="addTitle"
+                  id="addTitle"
+                  v-model="title"
+                />
+              </div>
+              <div class="mb-3">
+                <label for="" class="form-label">Category</label>
+                <select
+                  class="form-select"
+                  name="addCategory"
+                  id="addCategory"
+                  v-model="category"
+                >
+                  <option value="Stationary">Stationary</option>
+                  <option value="Office">Office</option>
+                  <option value="Arts and craft">Arts and craft</option>
+                </select>
+              </div>
+              <div class="mb-3">
+                <label for="addPrice" class="form-label">Price</label>
+                <input
+                  class="form-control"
+                  type="text"
+                  name="addPrice"
+                  id="addPrice"
+                  v-model="price"
+                />
+              </div>
+              <div class="mb-3">
+                <label for="addImg" class="form-label">Image URL</label>
+                <input
+                  class="form-control"
+                  type="text"
+                  name="addImg"
+                  id="addImg"
+                  v-model="img"
+                />
+              </div>
+              <div class="mb-3">
+                <label for="addDescription" class="form-label"
+                  >Description</label
+                >
+                <input
+                  class="form-control"
+                  type="text"
+                  name="addDescription"
+                  id="addDescription"
+                  v-model="description"
+                />
+              </div>
+            </div>
+
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Close
+            </button>
+            <br />
+            <button type="button" class="btn btn-primary" data-bs-dismiss="modal" @click="createProduct()">
+              Create Product
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+          
+          
   <!-- modal2 -->
 
   <div
@@ -345,9 +442,12 @@
       </div>
     </div>
   </div>
+ <input type="text" v-model="search" />
+  
 
   <div class="container my-5">
-    <input type="text" v-model="search" />
+   
+
     <div v-if="products.length" class="row">
       <div
         v-for="product of filterProducts"
@@ -415,6 +515,8 @@ export default {
       title: "",
       category: "",
       description: "",
+      phone_number: "",
+      
       img: "",
       price: "",
       search: "",
@@ -437,7 +539,9 @@ export default {
         .catch((err) => {
           alert("User not logged in");
         });
-    } else {
+    } 
+    
+    else {
       alert("User not logged in");
       this.$router.push({ name: "Login" });
     }
@@ -457,7 +561,7 @@ export default {
       if (dir == "desc") this.filteredProducts.reverse();
     },
      sortTitle(dir) {
-      this.filteredBlogs = this.filteredBlogs.sort((a, b) => {
+      this.filteredProducts= this.filteredProducts.sort((a, b) => {
         if (a.title < b.title) {
           return -1;
         }
@@ -466,7 +570,8 @@ export default {
         }
         return 0;
       });
-      if (dir == "desc") this.filteredBlogs.reverse();
+      console.log(typeof filteredProducts);
+      if (dir == "desc") this.filteredProducts.reverse();
     },
    },
     // Create Product
