@@ -47,11 +47,7 @@
       </div>
       <div class="mb-3">
         <label for="addPassword" class="form-label">description</label>
-        <input
-          class="form-control"
-          type="password"
-          name="addPassword"
-          id="addPassword"
+        <input class="form-control" type="password" name="addPassword" id="addPassword"
           v-model="description"
         />
       </div>

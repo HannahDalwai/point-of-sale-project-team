@@ -12,6 +12,14 @@
           <input class="login__input" type="text" v-model="email" placeholder="Contact " required/>
   		</div>
 
+
+
+
+
+
+
+
+
     	<div class="login__field">
           <input class="login__input" type="email" v-model="phone_number" placeholder="Email" required/>
   		</div>
