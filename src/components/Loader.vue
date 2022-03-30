@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-<template >
-    <p>this is loading</p>
-</template>
-=======
 <template>
    
     <div class="flower-spinner">
